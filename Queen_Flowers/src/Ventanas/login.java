@@ -11,12 +11,23 @@ public class login extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         
-        
         ImageIcon imgIcon = new ImageIcon(getClass().getResource("../Imagenes/User.png"));
         Image imgEscalada = imgIcon.getImage().getScaledInstance(lbImage.getWidth(),
                 lbImage.getHeight(), Image.SCALE_SMOOTH);
         Icon iconoEscalado = new ImageIcon(imgEscalada);
         lbImage.setIcon(iconoEscalado);
+        
+        ImageIcon imgIc = new ImageIcon(getClass().getResource("../Imagenes/FLORES.png"));
+        Image imgEs = imgIc.getImage().getScaledInstance(Fondo.getWidth(),
+                Fondo.getHeight(), Image.SCALE_SMOOTH);
+        Icon iconoEs = new ImageIcon(imgEs);
+        Fondo.setIcon(iconoEs);
+        
+        ImageIcon imgI = new ImageIcon(getClass().getResource("../Imagenes/icons8-entrar-26.png"));
+        Image imgE = imgI.getImage().getScaledInstance(entrar.getWidth(),
+                entrar.getHeight(), Image.SCALE_SMOOTH);
+        Icon iconoE = new ImageIcon(imgE);
+        entrar.setIcon(iconoE);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -27,27 +38,18 @@ public class login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jToggleButton1 = new javax.swing.JToggleButton();
         lbImage = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         usuario = new javax.swing.JTextField();
         jPasswordField1 = new javax.swing.JPasswordField();
         salir = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jLabelFondo = new javax.swing.JLabel();
+        entrar = new javax.swing.JLabel();
+        Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jToggleButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8-entrar-26.png"))); // NOI18N
-        jToggleButton1.setBorderPainted(false);
-        jToggleButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jToggleButton1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jToggleButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 400, 50, -1));
 
         lbImage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/User.png"))); // NOI18N
         lbImage.setDisabledIcon(null);
@@ -62,6 +64,7 @@ public class login extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, -1, -1));
 
         usuario.setText("Usuario");
+        usuario.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         usuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usuarioActionPerformed(evt);
@@ -70,6 +73,7 @@ public class login extends javax.swing.JFrame {
         getContentPane().add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 160, -1));
 
         jPasswordField1.setText("jPasswordField1");
+        jPasswordField1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 160, -1));
 
         salir.setText("Salir");
@@ -83,17 +87,31 @@ public class login extends javax.swing.JFrame {
         jButton1.setText("Crear cuenta");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jButton1.setBorderPainted(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         getContentPane().add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 410, -1, -1));
 
-        jLabelFondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FLORES.png"))); // NOI18N
-        getContentPane().add(jLabelFondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, 420, 590));
+        entrar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8-entrar-26.png"))); // NOI18N
+        entrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                entrarMouseClicked(evt);
+            }
+        });
+        entrar.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                entrarKeyPressed(evt);
+            }
+        });
+        getContentPane().add(entrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 400, 40, 40));
+
+        Fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FLORES.png"))); // NOI18N
+        getContentPane().add(Fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 420, 570));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jToggleButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jToggleButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jToggleButton1ActionPerformed
 
     private void usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuarioActionPerformed
         // TODO add your handling code here:
@@ -103,6 +121,19 @@ public class login extends javax.swing.JFrame {
             // TODO add your handling code here:
             System.exit(0);
     }//GEN-LAST:event_salirActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void entrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entrarMouseClicked
+        // TODO add your handling code here:
+        System.exit(0);
+    }//GEN-LAST:event_entrarMouseClicked
+
+    private void entrarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_entrarKeyPressed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_entrarKeyPressed
 
     /**
      * @param args the command line arguments
@@ -140,11 +171,11 @@ public class login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Fondo;
+    private javax.swing.JLabel entrar;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabelFondo;
     private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JToggleButton jToggleButton1;
     private javax.swing.JLabel lbImage;
     private javax.swing.JButton salir;
     private javax.swing.JTextField usuario;
