@@ -124,11 +124,16 @@ public class login extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        register v2 = new register();
+        v2.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void entrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entrarMouseClicked
         // TODO add your handling code here:
-        System.exit(0);
+        home v2 = new home();
+        v2.setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_entrarMouseClicked
 
     private void entrarKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_entrarKeyPressed
