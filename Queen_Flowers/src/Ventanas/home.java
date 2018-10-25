@@ -43,14 +43,13 @@ public class home extends javax.swing.JFrame {
 
         panel1 = new javax.swing.JPanel();
         user = new javax.swing.JLabel();
-        panel2 = new javax.swing.JPanel();
-        jButton2 = new javax.swing.JButton();
         panel3 = new javax.swing.JPanel();
         maestro = new javax.swing.JButton();
         panel4 = new javax.swing.JPanel();
         ventas = new javax.swing.JButton();
         panel5 = new javax.swing.JPanel();
         calculadora = new javax.swing.JLabel();
+        panel2 = new javax.swing.JPanel();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -66,11 +65,6 @@ public class home extends javax.swing.JFrame {
 
         getContentPane().add(panel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 200));
 
-        jButton2.setText("jButton2");
-        panel2.add(jButton2);
-
-        getContentPane().add(panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 200, 800));
-
         panel3.setOpaque(false);
         panel3.setLayout(new java.awt.GridBagLayout());
 
@@ -79,7 +73,7 @@ public class home extends javax.swing.JFrame {
         maestro.setText("Maestro");
         panel3.add(maestro, new java.awt.GridBagConstraints());
 
-        getContentPane().add(panel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 200, 200));
+        getContentPane().add(panel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 200, 150));
 
         panel4.setOpaque(false);
         panel4.setLayout(new java.awt.GridBagLayout());
@@ -94,7 +88,7 @@ public class home extends javax.swing.JFrame {
         });
         panel4.add(ventas, new java.awt.GridBagConstraints());
 
-        getContentPane().add(panel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 200, 200));
+        getContentPane().add(panel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 200, 100));
 
         panel5.setOpaque(false);
         panel5.setLayout(new java.awt.GridBagLayout());
@@ -106,7 +100,8 @@ public class home extends javax.swing.JFrame {
         gridBagConstraints.gridheight = 100;
         panel5.add(calculadora, gridBagConstraints);
 
-        getContentPane().add(panel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 590, 200, 200));
+        getContentPane().add(panel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 200, 200));
+        getContentPane().add(panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 200, 200));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FLORES.png"))); // NOI18N
         fondo.setPreferredSize(new java.awt.Dimension(1200, 900));
@@ -159,7 +154,6 @@ public class home extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel calculadora;
     private javax.swing.JLabel fondo;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton maestro;
     private javax.swing.JPanel panel1;
     private javax.swing.JPanel panel2;
