@@ -4,33 +4,62 @@ import java.awt.Image;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 
-
 public class home extends javax.swing.JFrame {
 
-    
     public home() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setResizable(false);
+
+        ImageIcon imgIconosas = new ImageIcon(getClass().getResource("../Imagenes/calendario.png"));
+        Image imgEscaladass = imgIconosas.getImage().getScaledInstance(calendario.getWidth(),
+                calendario.getHeight(), Image.SCALE_SMOOTH);
+        Icon iconoEscaladsas = new ImageIcon(imgEscaladass);
+        calendario.setIcon(iconoEscaladsas);
+
+        ImageIcon imgIconosa = new ImageIcon(getClass().getResource("../Imagenes/icons8-salida-26.png"));
+        Image imgEscaladas = imgIconosa.getImage().getScaledInstance(salir.getWidth(),
+                salir.getHeight(), Image.SCALE_SMOOTH);
+        Icon iconoEscaladsa = new ImageIcon(imgEscaladas);
+        salir.setIcon(iconoEscaladsa);
+
+        ImageIcon imgIconos = new ImageIcon(getClass().getResource("../Imagenes/separador.png"));
+        Image imgEscalads = imgIconos.getImage().getScaledInstance(separador1.getWidth(),
+                separador1.getHeight(), Image.SCALE_SMOOTH);
+        Icon iconoEscalads = new ImageIcon(imgEscalads);
+        separador1.setIcon(iconoEscalads);
+
+        ImageIcon imgIconosi = new ImageIcon(getClass().getResource("../Imagenes/separador.png"));
+        Image imgEscaladis = imgIconosi.getImage().getScaledInstance(separador2.getWidth(),
+                separador2.getHeight(), Image.SCALE_SMOOTH);
+        Icon iconoEscaladis = new ImageIcon(imgEscaladis);
+        separador2.setIcon(iconoEscaladis);
+
+        ImageIcon imgIconoos = new ImageIcon(getClass().getResource("../Imagenes/separador.png"));
+        Image imgEscalados = imgIconoos.getImage().getScaledInstance(separador3.getWidth(),
+                separador3.getHeight(), Image.SCALE_SMOOTH);
+        Icon iconoEscalados = new ImageIcon(imgEscalados);
+        separador3.setIcon(iconoEscalados);
+
         ImageIcon imgIc = new ImageIcon(getClass().getResource("../Imagenes/FLORES.png"));
         Image imgEs = imgIc.getImage().getScaledInstance(fondo.getWidth(),
                 fondo.getHeight(), Image.SCALE_SMOOTH);
         Icon iconoEs = new ImageIcon(imgEs);
         fondo.setIcon(iconoEs);
-        
+
         ImageIcon imgIcon = new ImageIcon(getClass().getResource("../Imagenes/User.png"));
         Image imgEscalada = imgIcon.getImage().getScaledInstance(user.getWidth(),
                 user.getHeight(), Image.SCALE_SMOOTH);
         Icon iconoEscalado = new ImageIcon(imgEscalada);
         user.setIcon(iconoEscalado);
-        
-        ImageIcon imgIcono = new ImageIcon(getClass().getResource("../Imagenes/icons8-calculadora-30.png"));
+
+        ImageIcon imgIcono = new ImageIcon(getClass().getResource("../Imagenes/calculadora.png"));
         Image imgEscalad = imgIcono.getImage().getScaledInstance(calculadora.getWidth(),
                 calculadora.getHeight(), Image.SCALE_SMOOTH);
         Icon iconoEscalad = new ImageIcon(imgEscalad);
         calculadora.setIcon(iconoEscalad);
     }
-    
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -39,8 +68,11 @@ public class home extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        java.awt.GridBagConstraints gridBagConstraints;
 
+        se = new javax.swing.JSeparator();
+        separador1 = new javax.swing.JLabel();
+        separador2 = new javax.swing.JLabel();
+        separador3 = new javax.swing.JLabel();
         panel1 = new javax.swing.JPanel();
         user = new javax.swing.JLabel();
         panel3 = new javax.swing.JPanel();
@@ -48,13 +80,30 @@ public class home extends javax.swing.JFrame {
         panel4 = new javax.swing.JPanel();
         ventas = new javax.swing.JButton();
         panel5 = new javax.swing.JPanel();
-        calculadora = new javax.swing.JLabel();
         panel2 = new javax.swing.JPanel();
+        salir = new javax.swing.JLabel();
+        panel6 = new javax.swing.JPanel();
+        calculadora = new javax.swing.JLabel();
+        panel7 = new javax.swing.JPanel();
+        calendario = new javax.swing.JLabel();
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new java.awt.Dimension(1100, 800));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        se.setBackground(new java.awt.Color(0, 0, 0));
+        se.setOrientation(javax.swing.SwingConstants.VERTICAL);
+        getContentPane().add(se, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 10, 800));
+
+        separador1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/separador.png"))); // NOI18N
+        getContentPane().add(separador1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 200, 10));
+
+        separador2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/separador.png"))); // NOI18N
+        getContentPane().add(separador2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 200, 10));
+
+        separador3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/separador.png"))); // NOI18N
+        getContentPane().add(separador3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 600, 200, 10));
 
         panel1.setOpaque(false);
         panel1.setPreferredSize(new java.awt.Dimension(200, 200));
@@ -71,9 +120,14 @@ public class home extends javax.swing.JFrame {
         maestro.setBackground(new java.awt.Color(204, 0, 0));
         maestro.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         maestro.setText("Maestro");
+        maestro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                maestroActionPerformed(evt);
+            }
+        });
         panel3.add(maestro, new java.awt.GridBagConstraints());
 
-        getContentPane().add(panel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 200, 150));
+        getContentPane().add(panel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 200, 200));
 
         panel4.setOpaque(false);
         panel4.setLayout(new java.awt.GridBagLayout());
@@ -88,20 +142,43 @@ public class home extends javax.swing.JFrame {
         });
         panel4.add(ventas, new java.awt.GridBagConstraints());
 
-        getContentPane().add(panel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 200, 100));
+        getContentPane().add(panel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 200, 200));
 
         panel5.setOpaque(false);
         panel5.setLayout(new java.awt.GridBagLayout());
+        getContentPane().add(panel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 600, 200, 200));
 
-        calculadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8-calculadora-30.png"))); // NOI18N
-        calculadora.setPreferredSize(new java.awt.Dimension(100, 100));
-        gridBagConstraints = new java.awt.GridBagConstraints();
-        gridBagConstraints.gridwidth = 100;
-        gridBagConstraints.gridheight = 100;
-        panel5.add(calculadora, gridBagConstraints);
+        panel2.setOpaque(false);
+        panel2.setLayout(new java.awt.GridBagLayout());
 
-        getContentPane().add(panel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 200, 200));
-        getContentPane().add(panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 200, 200));
+        salir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/icons8-salida-26.png"))); // NOI18N
+        salir.setPreferredSize(new java.awt.Dimension(50, 50));
+        salir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                salirMouseClicked(evt);
+            }
+        });
+        panel2.add(salir, new java.awt.GridBagConstraints());
+
+        getContentPane().add(panel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 600, 150, 200));
+
+        panel6.setOpaque(false);
+        panel6.setLayout(new java.awt.GridBagLayout());
+
+        calculadora.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/calculadora.png"))); // NOI18N
+        calculadora.setPreferredSize(new java.awt.Dimension(70, 50));
+        panel6.add(calculadora, new java.awt.GridBagConstraints());
+
+        getContentPane().add(panel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 50, 150, 100));
+
+        panel7.setOpaque(false);
+        panel7.setLayout(new java.awt.GridBagLayout());
+
+        calendario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/calendario.png"))); // NOI18N
+        calendario.setPreferredSize(new java.awt.Dimension(50, 50));
+        panel7.add(calendario, new java.awt.GridBagConstraints());
+
+        getContentPane().add(panel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 150, 150, 100));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FLORES.png"))); // NOI18N
         fondo.setPreferredSize(new java.awt.Dimension(1200, 900));
@@ -114,6 +191,17 @@ public class home extends javax.swing.JFrame {
     private void ventasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ventasActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_ventasActionPerformed
+
+    private void maestroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maestroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_maestroActionPerformed
+
+    private void salirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMouseClicked
+        // TODO add your handling code here:
+        login v = new login();
+        v.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_salirMouseClicked
 
     /**
      * @param args the command line arguments
@@ -148,11 +236,12 @@ public class home extends javax.swing.JFrame {
                 new home().setVisible(true);
             }
         });
-        
+
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel calculadora;
+    private javax.swing.JLabel calendario;
     private javax.swing.JLabel fondo;
     private javax.swing.JButton maestro;
     private javax.swing.JPanel panel1;
@@ -160,7 +249,15 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JPanel panel3;
     private javax.swing.JPanel panel4;
     private javax.swing.JPanel panel5;
+    private javax.swing.JPanel panel6;
+    private javax.swing.JPanel panel7;
+    private javax.swing.JLabel salir;
+    private javax.swing.JSeparator se;
+    private javax.swing.JLabel separador1;
+    private javax.swing.JLabel separador2;
+    private javax.swing.JLabel separador3;
     private javax.swing.JLabel user;
     private javax.swing.JButton ventas;
     // End of variables declaration//GEN-END:variables
+ 
 }
