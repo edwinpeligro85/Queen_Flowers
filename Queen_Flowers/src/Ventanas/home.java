@@ -89,7 +89,6 @@ public class home extends javax.swing.JFrame {
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1100, 800));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         se.setBackground(new java.awt.Color(0, 0, 0));
@@ -119,6 +118,7 @@ public class home extends javax.swing.JFrame {
 
         maestro.setBackground(new java.awt.Color(204, 0, 0));
         maestro.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        maestro.setForeground(new java.awt.Color(255, 255, 255));
         maestro.setText("Maestro");
         maestro.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -134,6 +134,7 @@ public class home extends javax.swing.JFrame {
 
         ventas.setBackground(new java.awt.Color(204, 0, 0));
         ventas.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        ventas.setForeground(new java.awt.Color(255, 255, 255));
         ventas.setText("Ventas");
         ventas.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -194,6 +195,8 @@ public class home extends javax.swing.JFrame {
 
     private void maestroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maestroActionPerformed
         // TODO add your handling code here:
+        this.setVisible(false);
+        new maestro(this, true).setVisible(true);
     }//GEN-LAST:event_maestroActionPerformed
 
     private void salirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMouseClicked
@@ -259,5 +262,5 @@ public class home extends javax.swing.JFrame {
     private javax.swing.JLabel user;
     private javax.swing.JButton ventas;
     // End of variables declaration//GEN-END:variables
- 
+
 }
