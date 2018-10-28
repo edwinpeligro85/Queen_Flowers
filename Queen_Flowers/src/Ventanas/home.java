@@ -60,6 +60,10 @@ public class home extends javax.swing.JFrame {
         calculadora.setIcon(iconoEscalad);
     }
 
+    home(maestro aThis, boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -195,8 +199,8 @@ public class home extends javax.swing.JFrame {
 
     private void maestroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maestroActionPerformed
         // TODO add your handling code here:
-        this.setVisible(false);
         new maestro(this, true).setVisible(true);
+        this.setVisible(false);
     }//GEN-LAST:event_maestroActionPerformed
 
     private void salirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMouseClicked
