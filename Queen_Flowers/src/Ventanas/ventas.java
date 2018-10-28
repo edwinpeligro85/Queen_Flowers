@@ -1,53 +1,16 @@
 package Ventanas;
-
-import java.awt.Image;
-import javax.swing.Icon;
-import javax.swing.ImageIcon;
-
 /**
- *
- * @author edwin
+@author edwin
  */
-public class maestro extends java.awt.Dialog {
-
-    public maestro(java.awt.Frame parent, boolean modal) {
+public class ventas extends javax.swing.JDialog {
+    public ventas(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        this.setLocationRelativeTo(null);
-        
-        ImageIcon imgIcon = new ImageIcon(getClass().getResource("../Imagenes/User.png"));
-        Image imgEscalada = imgIcon.getImage().getScaledInstance(user.getWidth(),
-                user.getHeight(), Image.SCALE_SMOOTH);
-        Icon iconoEscalado = new ImageIcon(imgEscalada);
-        user.setIcon(iconoEscalado);
-        
-        ImageIcon imgIconosas = new ImageIcon(getClass().getResource("../Imagenes/home.png"));
-        Image imgEscaladass = imgIconosas.getImage().getScaledInstance(casa.getWidth(),
-                casa.getHeight(), Image.SCALE_SMOOTH);
-        Icon iconoEscaladsas = new ImageIcon(imgEscaladass);
-        casa.setIcon(iconoEscaladsas);
-        
-        ImageIcon imgIcono = new ImageIcon(getClass().getResource("../Imagenes/calculadora.png"));
-        Image imgEscalad = imgIcono.getImage().getScaledInstance(calculadora.getWidth(),
-                calculadora.getHeight(), Image.SCALE_SMOOTH);
-        Icon iconoEscalad = new ImageIcon(imgEscalad);
-        calculadora.setIcon(iconoEscalad);
-        
-        ImageIcon imgIc = new ImageIcon(getClass().getResource("../Imagenes/FLORES.png"));
-        Image imgEs = imgIc.getImage().getScaledInstance(fondo.getWidth(),
-                fondo.getHeight(), Image.SCALE_SMOOTH);
-        Icon iconoEs = new ImageIcon(imgEs);
-        fondo.setIcon(iconoEs);
     }
+    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        maestros = new javax.swing.JDialog();
-        jPanel7 = new javax.swing.JPanel();
-        jPanel8 = new javax.swing.JPanel();
-        jButton7 = new javax.swing.JButton();
-        jPanel9 = new javax.swing.JPanel();
-        jPanel10 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         casa = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -70,64 +33,12 @@ public class maestro extends java.awt.Dialog {
         jSeparator5 = new javax.swing.JSeparator();
         fondo = new javax.swing.JLabel();
 
-        maestros.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
-        jPanel7.setLayout(jPanel7Layout);
-        jPanel7Layout.setHorizontalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-        );
-        jPanel7Layout.setVerticalGroup(
-            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-        );
-
-        maestros.getContentPane().add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 200));
-
-        jPanel8.setLayout(new java.awt.GridBagLayout());
-
-        jButton7.setText("maestro");
-        jPanel8.add(jButton7, new java.awt.GridBagConstraints());
-
-        maestros.getContentPane().add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 200, 200));
-
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-        );
-
-        maestros.getContentPane().add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 200, 200));
-
-        javax.swing.GroupLayout jPanel10Layout = new javax.swing.GroupLayout(jPanel10);
-        jPanel10.setLayout(jPanel10Layout);
-        jPanel10Layout.setHorizontalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-        );
-        jPanel10Layout.setVerticalGroup(
-            jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 200, Short.MAX_VALUE)
-        );
-
-        maestros.getContentPane().add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 600, 200, 200));
-
-        setLocationRelativeTo(null);
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Ventas");
         setMaximumSize(new java.awt.Dimension(1100, 800));
+        setMinimumSize(new java.awt.Dimension(1100, 800));
         setResizable(false);
-        setTitle("Maestro");
-        addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowClosing(java.awt.event.WindowEvent evt) {
-                closeDialog(evt);
-            }
-        });
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setOpaque(false);
 
@@ -151,7 +62,7 @@ public class maestro extends java.awt.Dialog {
                 .addGap(47, 47, 47))
         );
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 200, 200));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, 200, 200));
 
         jPanel2.setOpaque(false);
         jPanel2.setPreferredSize(new java.awt.Dimension(200, 600));
@@ -233,7 +144,7 @@ public class maestro extends java.awt.Dialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 200, -1));
+        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 200, 200, -1));
 
         jPanel3.setOpaque(false);
 
@@ -256,7 +167,7 @@ public class maestro extends java.awt.Dialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 200));
+        getContentPane().add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 200, 200));
 
         jPanel4.setOpaque(false);
         jPanel4.setLayout(new java.awt.GridBagLayout());
@@ -272,7 +183,7 @@ public class maestro extends java.awt.Dialog {
         });
         jPanel4.add(jButton5, new java.awt.GridBagConstraints());
 
-        add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 200, 200));
+        getContentPane().add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 200, 200));
 
         jPanel5.setOpaque(false);
         jPanel5.setLayout(new java.awt.GridBagLayout());
@@ -288,7 +199,7 @@ public class maestro extends java.awt.Dialog {
         });
         jPanel5.add(jButton6, new java.awt.GridBagConstraints());
 
-        add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 200, 200));
+        getContentPane().add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 200, 200));
 
         jPanel6.setOpaque(false);
 
@@ -312,35 +223,36 @@ public class maestro extends java.awt.Dialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 600, 200, 200));
+        getContentPane().add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 600, 200, 200));
 
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
-        add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 400, -1));
+        getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 400, -1));
 
         jSeparator2.setForeground(new java.awt.Color(0, 0, 0));
-        add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 200, -1));
+        getContentPane().add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 200, -1));
 
         jSeparator3.setForeground(new java.awt.Color(0, 0, 0));
-        add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 600, 200, -1));
+        getContentPane().add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 600, 200, -1));
 
         jSeparator4.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator4.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, -1, 800));
+        getContentPane().add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 0, -1, 800));
 
         jSeparator5.setForeground(new java.awt.Color(0, 0, 0));
         jSeparator5.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, -1, 800));
+        getContentPane().add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, -1, 800));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FLORES.png"))); // NOI18N
-        add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 800));
+        getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1100, 800));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void closeDialog(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_closeDialog
-        setVisible(false);
-        dispose();
-    }//GEN-LAST:event_closeDialog
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        maestro_clientes dialog = new maestro_clientes(new java.awt.Frame(), true);
+        dialog.setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         maestro_empleados dialog = new maestro_empleados(new javax.swing.JFrame(), true);
@@ -348,11 +260,10 @@ public class maestro extends java.awt.Dialog {
         this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        maestro_clientes dialog = new maestro_clientes(new java.awt.Frame(), true);
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        maestro_inventario dialog = new maestro_inventario(new javax.swing.JFrame(), true);
         dialog.setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         maestro_proveedores dialog = new maestro_proveedores(new javax.swing.JFrame(), true);
@@ -368,17 +279,12 @@ public class maestro extends java.awt.Dialog {
         dialog.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        maestro_inventario dialog = new maestro_inventario(new javax.swing.JFrame(), true);
-        dialog.setVisible(true);
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                maestro dialog = new maestro(new java.awt.Frame(), true);
+                ventas dialog = new ventas(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+                    @Override
                     public void windowClosing(java.awt.event.WindowEvent e) {
                         System.exit(0);
                     }
@@ -387,7 +293,6 @@ public class maestro extends java.awt.Dialog {
             }
         });
     }
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel calculadora;
@@ -399,23 +304,17 @@ public class maestro extends java.awt.Dialog {
     private javax.swing.JButton jButton4;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JSeparator jSeparator4;
     private javax.swing.JSeparator jSeparator5;
-    private javax.swing.JDialog maestros;
     private javax.swing.JLabel user;
     // End of variables declaration//GEN-END:variables
 }
