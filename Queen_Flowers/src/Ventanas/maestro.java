@@ -70,7 +70,6 @@ public class maestro extends java.awt.Dialog {
         jSeparator5 = new javax.swing.JSeparator();
         fondo = new javax.swing.JLabel();
 
-        maestros.setPreferredSize(new java.awt.Dimension(1100, 800));
         maestros.getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
@@ -120,7 +119,6 @@ public class maestro extends java.awt.Dialog {
         maestros.getContentPane().add(jPanel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 600, 200, 200));
 
         setLocationRelativeTo(null);
-        setPreferredSize(new java.awt.Dimension(1100, 800));
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowClosing(java.awt.event.WindowEvent evt) {
                 closeDialog(evt);
@@ -169,6 +167,7 @@ public class maestro extends java.awt.Dialog {
         jButton2.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Empleados");
+        jButton2.setToolTipText("");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -331,13 +330,15 @@ public class maestro extends java.awt.Dialog {
     }//GEN-LAST:event_closeDialog
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        maestro_empleados dialog = new maestro_empleados(new javax.swing.JFrame(), true);
+        dialog.setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         maestro_clientes dialog = new maestro_clientes(new java.awt.Frame(), true);
         dialog.setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
