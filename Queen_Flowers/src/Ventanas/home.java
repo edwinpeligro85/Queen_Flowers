@@ -8,6 +8,10 @@ public class home extends javax.swing.JFrame {
 
     public home() {
         initComponents();
+        principal prin = new principal();
+        prin.setVisible(true);
+        //this.setAlwaysOnTop(true);
+        
         this.setLocationRelativeTo(null);
         this.setResizable(false);
 
@@ -93,6 +97,8 @@ public class home extends javax.swing.JFrame {
         fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(1100, 800));
+        setPreferredSize(new java.awt.Dimension(1100, 800));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         se.setBackground(new java.awt.Color(0, 0, 0));
@@ -186,7 +192,7 @@ public class home extends javax.swing.JFrame {
         getContentPane().add(panel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 150, 150, 100));
 
         fondo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagenes/FLORES.png"))); // NOI18N
-        fondo.setPreferredSize(new java.awt.Dimension(1200, 900));
+        fondo.setPreferredSize(new java.awt.Dimension(1100, 800));
         fondo.setVerticalTextPosition(javax.swing.SwingConstants.TOP);
         getContentPane().add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1112, 799));
 
@@ -199,15 +205,17 @@ public class home extends javax.swing.JFrame {
 
     private void maestroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_maestroActionPerformed
         // TODO add your handling code here:
-        new maestro(this, true).setVisible(true);
+        maestro na = new maestro(new javax.swing.JFrame(), true);
+        na.setVisible(true);
         this.setVisible(false);
+       // new maestro(this, true).setVisible(true);
     }//GEN-LAST:event_maestroActionPerformed
 
     private void salirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_salirMouseClicked
         // TODO add your handling code here:
         login v = new login();
         v.setVisible(true);
-        this.setVisible(false);
+        this.dispose();
     }//GEN-LAST:event_salirMouseClicked
 
     /**

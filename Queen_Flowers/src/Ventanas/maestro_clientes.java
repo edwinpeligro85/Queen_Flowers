@@ -34,17 +34,11 @@ public class maestro_clientes extends java.awt.Dialog {
         Icon iconoEscalad = new ImageIcon(imgEscalad);
         calculadora.setIcon(iconoEscalad);
         
-         ImageIcon imgIc = new ImageIcon(getClass().getResource("../Imagenes/FLORES.png"));
+        ImageIcon imgIc = new ImageIcon(getClass().getResource("../Imagenes/FLORES.png"));
         Image imgEs = imgIc.getImage().getScaledInstance(fondo.getWidth(),
                 fondo.getHeight(), Image.SCALE_SMOOTH);
         Icon iconoEs = new ImageIcon(imgEs);
         fondo.setIcon(iconoEs);
-        
-        /*ImageIcon a = new ImageIcon(getClass().getResource("../Imagenes/icons8-añadir-usuario-masculino-30.png"));
-        Image a2 = a.getImage().getScaledInstance(añadir.getWidth(),
-                añadir.getHeight(), Image.SCALE_SMOOTH);
-        Icon a3 = new ImageIcon(a2);
-        añadir.setIcon(a3);*/
     }
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
