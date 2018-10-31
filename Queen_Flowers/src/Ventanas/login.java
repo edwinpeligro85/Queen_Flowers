@@ -1,6 +1,11 @@
 package Ventanas;
 
 import java.awt.Image;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -8,6 +13,7 @@ import javax.swing.JOptionPane;
 public class login extends javax.swing.JFrame {
 
     public login() {
+        conexion();
         initComponents();
         this.setLocationRelativeTo(null);
 
@@ -44,6 +50,7 @@ public class login extends javax.swing.JFrame {
         Fondo = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Login");
         setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -60,7 +67,7 @@ public class login extends javax.swing.JFrame {
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 270, -1, -1));
 
         usuario.setText("Usuario");
-        usuario.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        usuario.setBorder(new javax.swing.border.SoftBevelBorder(0));
         usuario.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 usuarioActionPerformed(evt);
@@ -69,7 +76,7 @@ public class login extends javax.swing.JFrame {
         getContentPane().add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 160, -1));
 
         contraseña.setText("jPasswordField1");
-        contraseña.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        contraseña.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
         getContentPane().add(contraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 160, -1));
 
         salir.setText("Salir");
@@ -81,7 +88,7 @@ public class login extends javax.swing.JFrame {
         getContentPane().add(salir, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, -1, -1));
 
         jButton1.setText("Crear cuenta");
-        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(0));
         jButton1.setBorderPainted(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -114,7 +121,6 @@ public class login extends javax.swing.JFrame {
     }//GEN-LAST:event_usuarioActionPerformed
 
     private void salirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_salirActionPerformed
-        // TODO add your handling code here:
         System.exit(0);
     }//GEN-LAST:event_salirActionPerformed
 
@@ -127,7 +133,7 @@ public class login extends javax.swing.JFrame {
     private void entrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_entrarMouseClicked
         char c[] = contraseña.getPassword();
         String clave = new String(c);
-        if (usuario.getText().equals("Administrador") && clave.equals("12345")) {
+        if (usuario.getText().equals("user") && clave.equals("123")) {
             this.dispose();
 
             JOptionPane.showMessageDialog(null, "Bienvenido\n"
@@ -185,6 +191,29 @@ public class login extends javax.swing.JFrame {
         });
     }
 
+    public static void conexion() {
+        String driver = "org.git.mm.mysql.Driver";
+        String url = "jdbc:mysql://localhost/queen_flowers";
+        try {
+            Connection roli=DriverManager.getConnection(url,"root","");
+            Statement sta=roli.createStatement();
+            String sql="SELECT * FROM cliente";
+            ResultSet resultado=sta.executeQuery(sql);
+            System.out.println(resultado);
+            while (resultado.next()){
+                System.out.print(resultado.getInt("cedula_cliente")+" ");
+                System.out.print(resultado.getString("nombre")+" ");
+                System.out.print(resultado.getString("apellido")+" ");
+                System.out.print(resultado.getString("direccion")+" ");
+                System.out.print(resultado.getString("ciudad")+" ");
+                System.out.print(resultado.getString("telefono"));
+                System.out.println("");
+                
+            }
+        } catch (SQLException ex) {
+            System.out.println("Error en la conexion");
+        }
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Fondo;
     private javax.swing.JPasswordField contraseña;
